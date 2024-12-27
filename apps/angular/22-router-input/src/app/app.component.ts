@@ -3,8 +3,9 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
-  imports: [RouterLink, RouterModule, ReactiveFormsModule],
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterLink, RouterModule, ReactiveFormsModule],
   template: `
     <label for="userName">UserName</label>
     <input id="userName" type="text" [formControl]="userName" />
